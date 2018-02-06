@@ -4,7 +4,7 @@ router.get('/', (req, res, next) => {
     res.render('main/home');
 });
 
-router.get('/mygigs', (req, res, next) => {
+router.get('/my-gigs', (req, res, next) => {
   res.render('main/my-gigs');
 });
 
