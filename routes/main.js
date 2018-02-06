@@ -4,7 +4,9 @@ const Gig = require('../models/gig');
 const User = require('../models/user');
 
 router.get('/', (req, res, next) => {
-    res.render('main/home');
+    Gig.find({}, function(err, gigs) {
+      res.render('main/home', { gigs: gigs });
+    })
 });
 
 router.get('/my-gigs', (req, res, next) => {
